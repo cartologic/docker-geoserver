@@ -2,11 +2,11 @@ version: '3'
 
 services:
    geoserver:
-      image: cartologic/geoserver:2.15.2
+      image: cartologic/geoserver:2.16.0
       volumes:
         - "./geoserver_data:/opt/geoserver/data_dir"
       ports:
-        - "8600:8080"
+        - "3456:8080"
       restart: on-failure
       env_file:
         - docker-env/geoserver.env
